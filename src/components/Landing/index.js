@@ -1,14 +1,16 @@
 import React from "react";
 import Typical from "react-typical";
 import { Link } from "react-router-dom";
-import { FirstTextStyle, SecondTextStyle, StartButton, TextWrapper, Wrapper } from "./LandingElememts";
+import { ButtonWrapper, FirstTextStyle, LoginButton, RegisterButton, SecondTextStyle, TextWrapper, Wrapper } from "./LandingElememts";
 
 
 const Landing = () => {
   return (
       <Wrapper>
         <TextWrapper>
-          <FirstTextStyle>글쓰기는 </FirstTextStyle>
+       
+        <FirstTextStyle>글쓰기는 </FirstTextStyle>
+          
           <Typical
             loop={Infinity}
             wrapper={SecondTextStyle}
@@ -43,10 +45,16 @@ const Landing = () => {
               1200,
             ]}
           />
+          </TextWrapper>
+     
           <Link to="/main">
-          <StartButton>글쓰기 시작하기</StartButton>
+          
+            <ButtonWrapper>
+          <RegisterButton>글쓰기 시작하기</RegisterButton>
+          <LoginButton> 계정이 존재합니다</LoginButton>
+          </ButtonWrapper>
           </Link>
-        </TextWrapper>
+        
       </Wrapper>
   );
 };
