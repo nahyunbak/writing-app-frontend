@@ -47,14 +47,17 @@ const Landing = () => {
           />
           </TextWrapper>
      
-          <Link to="/main">
+          
           
             <ButtonWrapper>
-          <RegisterButton>글쓰기 시작하기</RegisterButton>
-          <LoginButton> 계정이 존재합니다</LoginButton>
-          </ButtonWrapper>
+            <Link to="/survey/1">
+          <RegisterButton> 지금 시작하기</RegisterButton>
           </Link>
-        
+          <Link to="/auth/login">
+          <LoginButton> 계정이 존재합니다</LoginButton>
+          
+          </Link>
+          </ButtonWrapper>
       </Wrapper>
   );
 };
